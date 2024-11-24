@@ -33,7 +33,7 @@ from abc import ABC, abstractmethod
 import math
 
 
-# The Shape class becomes an abstract base class (ABC) because it contains at least one abstract method.
+# The Shape class becomes an abstract base class (ABC) because it contains at least one abstract method, and inherits ABC class.
 # Trying to instantiate Shape directly will raise a TypeError.
 class Shape(ABC):
 
