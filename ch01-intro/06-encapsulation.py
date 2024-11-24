@@ -2,10 +2,11 @@
 06-encapsulation.py: Python script to demonstrate OOP concept encapsulation.
 
 Description:
-    This script contains class definition BankAccount, and demontstrates encapsulation with its private fields
+    This script contains class definition BankAccount, and demonstrates encapsulation with its private fields
     __account_number and __balance.
 Usage:
     `python 06-encapsulation.py`
+
 Arguments:
     None
 
