@@ -14,6 +14,7 @@ def calculate_age(birthYear: int) -> int:
     return f"Given that you were born in {birthYear}, your age is {datetime.now().year - birthYear}!"
 
 
+# TODO: Write a functions that accepts *args and **kwargs
 greetMessage = greet("tuna")
 print(greetMessage)
 
