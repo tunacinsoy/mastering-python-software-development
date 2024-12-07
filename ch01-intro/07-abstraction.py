@@ -19,11 +19,11 @@ Arguments:
 Author:
     Tuna Cinsoy
 
-Date:
-    2024-11-24
+Last Modification Date:
+    2024-12-07
 
 Version:
-    1.0.0
+    1.1.0
 
 License:
     MIT License
@@ -33,11 +33,16 @@ from abc import ABC, abstractmethod
 import math
 
 
-# The Shape class becomes an abstract base class (ABC) because it contains at least one abstract method, and inherits ABC class.
+# The Shape class becomes an abstract base class (ABC) because it inherits ABC class.
 # Trying to instantiate Shape directly will raise a TypeError.
+# However, it is not a necessary for abstract classes to have at least one abstactmethod in order to be an abstract class.
 class Shape(ABC):
+    # We cannot directly instantiate abstract classes however abstract classes can aslo have init function.
 
-    # @abstractmethod used to define a method that must be implemented by any subclass of an abstract base class.
+    def __init__(self, name: str):
+        self.name = name
+
+    # @abstractmethod used to define a method that MUST be implemented by any subclass of an abstract base class.
     # It enforces that the subclass provides its own implementation of the method.
     @abstractmethod
     def get_area(self):
@@ -50,7 +55,8 @@ class Shape(ABC):
 
 
 class Rectangle(Shape):
-    def __init__(self, width, height):
+    def __init__(self, width, height, name):
+        super().__init__(name)
         self.width = width
         self.height = height
 
@@ -62,7 +68,8 @@ class Rectangle(Shape):
 
 
 class Circle(Shape):
-    def __init__(self, radius):
+    def __init__(self, radius, name):
+        super().__init__(name)
         self.radius = radius
 
     def get_area(self) -> float:
@@ -72,9 +79,16 @@ class Circle(Shape):
         return 2 * math.pi * self.radius
 
 
-shapes = [Rectangle(4, 5), Circle(3)]
+shapes = [Rectangle(4, 5, "rectangle"), Circle(3, "circle")]
+
+print(type(Rectangle))
+
+shape3 = Rectangle(4, 7, "rectangle3")
+print(type(shape3))
+
 
 for shape in shapes:
+    # type(shape) returns the type of it as an object, however, if we say type(shape).__name__ it will returns its type as string.
     print(
         f"The {type(shape).__name__} has area {shape.get_area():.3f}, and perimeter {round(shape.get_perimeter())}"
     )
