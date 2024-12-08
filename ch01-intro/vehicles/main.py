@@ -54,3 +54,6 @@ print_car_info(my_car)  # Prints: Mercedes, A200, 2016 , 20 kph
 print_car_info(
     electric_car
 )  # Prints: Tesla, Model 3, 2022 , 0 kph, Electric Car, 75 kWh, 50% charge left to use.
+
+# The print_car_info function can work with both Car and ElectricCar
+# objects, demonstrating polymorphism in action.

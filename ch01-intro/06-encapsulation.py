@@ -3,7 +3,7 @@
 
 Description:
     This script contains class definition BankAccount, and demonstrates encapsulation with its
-    private field __account_number and prpotected field _balance.
+    private field __account_number and protected field _balance.
 
     Private members are similar to protected members,
     but the difference is that class members declared as private cannot be accessed outside the class, nor by any derived class.
