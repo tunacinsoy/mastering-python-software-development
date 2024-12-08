@@ -1,3 +1,20 @@
+"""
+Description:
+    The aim of this script is to get familiar with list comprehensions.
+
+Usage:
+    `python <file_name>`
+
+Arguments:
+    None
+
+Author:
+    Tuna Cinsoy
+
+License:
+    MIT License
+"""
+
 squares = [x**2 for x in range(1, 11)]
 print(squares)
 

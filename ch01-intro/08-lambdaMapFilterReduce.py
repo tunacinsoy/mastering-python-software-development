@@ -11,7 +11,7 @@ Description:
     In other words, private members are only accessible within the class where they are declared.
 
 Usage:
-    `python 06-encapsulation.py`
+    `python <file_name>`
 
 Arguments:
     None
